@@ -786,6 +786,11 @@ open class BarLineChartViewBase: ChartViewBase, BarLineScatterCandleBubbleChartD
                 _outerScrollView?.nsuiIsScrollEnabled = true
                 _outerScrollView = nil
             }
+            
+            if isHighlightPerDragEnabled
+            {
+                self.highlightValue(nil, callDelegate: true)
+            }
         }
     }
     
